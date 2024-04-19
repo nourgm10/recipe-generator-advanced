@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Recipe Generator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the recipe generator</h1>
+    </header>
+
+    <main>
+      <div class="recipe-generator">
+        <form id="recipe-generator-form">
+          <div class="input-row">
+            <div class="input-element">
+              <label for="ingredients"
+                >What ingredients do you have on hand? *</label
+              >
+              <input
+                type="text"
+                placeholder="i.e: eggs, spaghetti, 4 apples, salmon..."
+                autofocus
+                required
+                autocomplete="off"
+                class="typing-field"
+                id="ingredients"
+              />
+            </div>
+
+            <div class="input-element">
+              <label for="ingredients-to-avoid"
+                >What ingredients do you want to avoid?</label
+              >
+              <input
+                type="text"
+                placeholder="i.e: nuts, dairy, onions..."
+                autocomplete="off"
+                class="typing-field"
+                id="ingredients-to-avoid"
+              />
+            </div>
+
+            <div class="input-element">
+              <label for="servings"
+                >How many servings would you like to cook? *</label
+              >
+              <input
+                type="number"
+                placeholder="i.e: 4"
+                required
+                autocomplete="off"
+                class="typing-field"
+                id="servings"
+              />
+            </div>
+          </div>
+
+          <div class="input-row">
+            <div class="input-element">
+              <label for="time">How much time do you have?</label>
+              <input
+                type="text"
+                placeholder="i.e: 20 minutes, 1h, 45 min..."
+                autofocus
+                required
+                autocomplete="off"
+                class="typing-field"
+                id="time"
+              />
+            </div>
+
+            <div class="input-element">
+              <label for="macros"
+                >Do you want to choose your macros per portion?</label
+              >
+              <input
+                type="text"
+                placeholder="i.e: 700kcal, 35g protein, 20g fat..."
+                autocomplete="off"
+                class="typing-field"
+                id="macros"
+              />
+            </div>
+
+            <div class="input-element">
+              <label>What unit system do you use? *</label>
+              <div class="radio-options">
+                <input
+                  type="radio"
+                  id="metric"
+                  name="unit-system"
+                  value="metric"
+                  checked
+                />
+                <label for="metric">Metric</label>
+                <input
+                  type="radio"
+                  id="imperial"
+                  name="unit-system"
+                  value="imperial"
+                />
+                <label for="imperial">Imperial</label>
+              </div>
+            </div>
+          </div>
+
+          <input type="submit" class="button" />
+        </form>
+        <div class="recipe hidden" id="recipe"></div>
+      </div>
+    </main>
+
+    <footer>
+      <span class="footer-text">This AI project was coded by</span>
+      <a href="https://github.com/nourgm10" target="_blank" class="footer-links"
+        >Nour Ghallale</a
+      >
+      <span class="footer-text">, is open-sourced on</span>
+      <a
+        href="https://github.com/nourgm10/recipe-generator"
+        target="_blank"
+        class="footer-links"
+        >GitHub</a
+      >
+      <span class="footer-text">and hosted on</span>
+      <a
+        href="https://nours-recipe-generator.netlify.app/"
+        target="_blank"
+        class="footer-links"
+        >Netlify</a
+      >
+    </footer>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

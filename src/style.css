@@ -1,0 +1,174 @@
+body {
+  background: #f6f1ef;
+}
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  color: #851a1a;
+  font-weight: 500;
+  text-align: center;
+  margin: 120px auto 40px;
+}
+
+.recipe-generator {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 20px 60px rgba(100, 50, 50, 0.08);
+  max-width: 1000px;
+  padding: 30px 20px;
+}
+
+#recipe-generator-form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  font-family: "Ubuntu", sans-serif;
+  color: #404040;
+  opacity: 70%;
+  font-size: 12px;
+  text-align: center;
+  font-style: italic;
+  margin-top: 40px;
+  text-shadow: none;
+}
+
+.footer-links {
+  opacity: 100%;
+  color: #404040;
+  font-weight: 500;
+}
+
+.typing-field {
+  font-family: "Josefin Slab", serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  border-radius: 18px;
+  border: 2px;
+  color: #851a1a;
+  opacity: 70%;
+  height: 40px;
+  width: 90%;
+  margin: 5px;
+  padding-left: 15px;
+  box-shadow: -2px -2px 8px rgba(61, 31, 31, 0.05) inset,
+    2px 3px 8px rgba(43, 19, 19, 0.1) inset;
+}
+
+.typing-field:focus {
+  outline: none;
+  background-color: #fffbfb;
+}
+
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-element {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 20px;
+}
+
+.radio-options {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align radio inputs to the right */
+  max-width: 20%;
+}
+
+.radio-options label {
+  margin-right: 10px; /* Adjust spacing between label and radio buttons */
+  margin-left: 2px;
+  padding-left: 2px;
+  padding-top: 6px;
+  margin-bottom: 3px;
+
+}
+
+    input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #e3cec5;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 11px;
+        height: 11px;
+        border-radius: 11px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #851a1a;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 3px solid #e3cec5;
+    }
+
+.button {
+  border: none;
+  border-radius: 18px;
+  background: #851a1a;
+  box-shadow: 0px 20px 60px rgba(100, 50, 50, 0.08);
+  color: #f2f2f2;
+  height: 40px;
+  width: 100px;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+label {
+  color: #696969;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 12px;
+  display: block;
+  width: 90%;
+}
+
+.recipe {
+  color: #636363;
+  font-family: "Josefin Slab", serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 40px;
+  line-height: 1.5;
+  text-align: left;
+  padding-left: 20px;
+  border-left: 3px solid #851a1a;
+  border-radius: 0px 20px 20px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+.blink {
+  animation: blink 1.5s step-start 0s infinite;
+}
